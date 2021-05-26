@@ -2,7 +2,7 @@ import XCTest
 @testable import SimpleCow
 
 extension SimpleCow {
-  var identifier: ObjectIdentifier {
+  fileprivate var identifier: ObjectIdentifier {
     .init(_storage)
   }
 }
@@ -22,5 +22,5 @@ final class SimpleCowTests: XCTestCase {
     XCTAssertEqual(mut.value, newValue)
     XCTAssertNotEqual(immut.identifier, mut.identifier)
   }
-
+  
 }
